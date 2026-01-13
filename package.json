@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "Development-only debug console utilities for Vite projects.",
-  "main": "src/main.js",
+  "main": "src/index.js",
   "files": [
     "src",
     "LICENSE",
