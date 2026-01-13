@@ -1,0 +1,33 @@
+{
+  "name": "vt-vue-primitive-tags",
+  "author": "vario",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Development-only debug console utilities for Vite projects.",
+  "main": "src/main.js",
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "vite",
+    "typescript",
+    "vue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/variotry/vue-primitive-tags.git"
+  },
+  "dependencies": {
+    "@inertiajs/vue3": "^2.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0",
+    "vite": "^5.0",
+    "@vue/tsconfig": "^0.8.1"
+  }
+}
