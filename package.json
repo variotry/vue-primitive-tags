@@ -4,9 +4,23 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "Development-only debug console utilities for Vite projects.",
-  "main": "src/index.js",
+  "type": "module",
+  "main": "dist/vt-primitive-tags.cjs.js",
+  "module": "dist/vt-primitive-tags.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/vt-primitive-tags.es.js",
+      "require": "./dist/vt-primitive-tags.cjs.js"
+    },
+    "./src/*": {
+      "import": "./src/*"
+    }
+  },
   "files": [
     "src",
+    "dist",
     "LICENSE",
     "README.md"
   ],
@@ -15,6 +29,9 @@
     "typescript",
     "vue"
   ],
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/variotry/vue-primitive-tags.git"
@@ -26,8 +43,12 @@
     "vue": "^3.3.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/tsconfig": "^0.8.1",
     "typescript": "^5.0",
-    "vite": "^5.0",
-    "@vue/tsconfig": "^0.8.1"
+    "vite": "^5.4.21",
+    "vue": "^3.5.26",
+    "@types/node": "^25.0.8",
+    "vue-tsc": "^3.2.2"
   }
 }
