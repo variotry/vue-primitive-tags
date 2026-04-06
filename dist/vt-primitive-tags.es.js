@@ -1,9 +1,10 @@
-import { defineComponent as B, useAttrs as S, computed as n, createElementBlock as k, createBlock as x, openBlock as p, mergeProps as f, renderSlot as d, createTextVNode as v, toDisplayString as h, unref as _, normalizeProps as F, withCtx as w } from "vue";
+import { defineComponent as B, useAttrs as S, computed as n, createElementBlock as k, createBlock as x, openBlock as p, mergeProps as f, renderSlot as d, createTextVNode as v, toDisplayString as h, unref as _, normalizeProps as w, withCtx as F } from "vue";
 import { Link as P } from "@inertiajs/vue3";
-const C = () => typeof window < "u" && typeof document < "u", T = ["href", "rel", "target"], U = /* @__PURE__ */ B({
+const C = () => typeof window < "u" && typeof document < "u", E = ["href", "rel", "target"], U = /* @__PURE__ */ B({
   __name: "Va",
   props: {
     external: { type: Boolean, default: !1 },
+    component: {},
     data: {},
     method: {},
     replace: { type: Boolean },
@@ -25,10 +26,14 @@ const C = () => typeof window < "u" && typeof document < "u", T = ["href", "rel"
     onCancel: {},
     onSuccess: {},
     onError: {},
+    onHttpException: {},
+    onNetworkError: {},
     onFlash: {},
     onPrefetched: {},
     onPrefetching: {},
     href: {},
+    instant: { type: Boolean },
+    pageProps: {},
     prefetch: { type: [Boolean, String, Array] },
     cacheFor: {},
     cacheTags: {},
@@ -50,7 +55,7 @@ const C = () => typeof window < "u" && typeof document < "u", T = ["href", "rel"
       }
     }), y = n(() => l.value && !t.rel ? "noopener noreferrer" : t.rel), c = n(() => r.value ? s(r.value) ? r.value.replace(/^[^:]+:(.+)$/, "$1") : r.value : ""), i = n(() => {
       if (u.value) {
-        const { href: e, rel: o, target: $, ...m } = a;
+        const { href: e, rel: o, target: T, ...m } = a;
         return m;
       } else {
         const { external: e, ...o } = t;
@@ -69,8 +74,8 @@ const C = () => typeof window < "u" && typeof document < "u", T = ["href", "rel"
       d(e.$slots, "default", {}, () => [
         v(h(c.value), 1)
       ])
-    ], 16, T)) : (p(), x(_(P), F(f({ key: 1 }, i.value)), {
-      default: w(() => [
+    ], 16, E)) : (p(), x(_(P), w(f({ key: 1 }, i.value)), {
+      default: F(() => [
         d(e.$slots, "default", {}, () => [
           v(h(c.value), 1)
         ])

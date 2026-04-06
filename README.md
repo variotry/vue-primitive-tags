@@ -1,5 +1,11 @@
 > ⚠ This package is primarily intended for personal use. 
 
+# Inertia のバージョンに関して
+- 1.x は Inertia v2
+- 2.x は Inertia v3
+
+と依存する Inertia のバージョンが異なる
+
 # vt-vue-primitive-tags
 基本タグを拡張する vueコンポーネントを管理。現状は`<Va>`のみ。
 
